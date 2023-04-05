@@ -1,0 +1,34 @@
+<section class="slideshow">
+  <div class="slide" *ngFor="let slide of slides; let i = index" [class.active]="currentSlide === i" [style.background-image]="'url(' + slide.imgUrl + ')'">
+    <div class="slide-content" >
+      <h2>{{ slide.title }}</h2>
+      <p>{{ slide.description }}</p>
+    </div>
+  </div>
+</section>
+<div class="space"></div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6" data-aos="fade-up" data-aos-duration="3000">
+      <div class="card mb-3">
+        <div class="card-body">
+          <h2 class="card-title"> Mchemo Construction Manager</h2>
+          <p class="card-text">We are a construction company committed to providing top-notch services to our clients. With years of experience and a team of skilled professionals, we pride ourselves on delivering high-quality construction projects that meet and exceed our clients' expectations.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6" data-aos="fade-up" data-aos-duration="3000">
+      <div class="card mb-3">
+        <div class="card-body">
+          <h2 class="card-title">Our Mission and Values</h2>
+          <ul class="card-text">
+            <li><strong>Mission:</strong> To deliver exceptional construction services that enhance the quality of life for our clients and communities.</li>
+            <li><strong>Values:</strong> Integrity, Excellence, Safety, Collaboration, and Sustainability.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
