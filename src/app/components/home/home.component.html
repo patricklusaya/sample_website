@@ -1,34 +1,161 @@
-<section class="slideshow">
-  <div class="slide" *ngFor="let slide of slides; let i = index" [class.active]="currentSlide === i" [style.background-image]="'url(' + slide.imgUrl + ')'">
-    <div class="slide-content" >
-      <h2>{{ slide.title }}</h2>
-      <p>{{ slide.description }}</p>
-    </div>
+<section class="cover-section">
+  <div class="cover-image">
+    <img src="../../../assets/images/img2.jpg" alt="Cover Image">
+  </div>
+  <div class="cover-content">
+    <h1>Company Name</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus suscipit, odit praesentium nisi velit ut.</p>
+ 
+    
+    <div class="mybtn"><button class="btn btn-primary" (click)="sendEmail()">Contact Us</button></div>
+    
   </div>
 </section>
+
+<section class="home-section"  data-aos="fade-up" data-aos-duration="3000">
+  <div class="text-wrapper">
+    <h1 style="color: rgb(249, 70, 38);">Welcome to our website</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt ultricies justo ut molestie. Maecenas tincidunt suscipit lectus at eleifend. </p>
+  </div>
+  <div class="gif-wrapper">
+    <img src="../../../assets/images/serv11.gif" alt="Gif of a person holding a banner">
+  </div>
+</section>
+
+
 <div class="space"></div>
-<div class="container">
+<div class="container" id="about" data-aos="fade-up" data-aos-duration="3000">
   <div class="row">
-    <div class="col-md-6" data-aos="fade-up" data-aos-duration="3000">
+    <div class="text-center" style="color: rgb(249, 70, 38);font-weight: bold;"><h2 >About Us</h2></div>
+    <div class="col-md-6" >
+      
+      
       <div class="card mb-3">
+        
         <div class="card-body">
-          <h2 class="card-title"> Mchemo Construction Manager</h2>
+          <h3 class="card-title"> Company Name</h3>
           <p class="card-text">We are a construction company committed to providing top-notch services to our clients. With years of experience and a team of skilled professionals, we pride ourselves on delivering high-quality construction projects that meet and exceed our clients' expectations.</p>
         </div>
       </div>
     </div>
-    <div class="col-md-6" data-aos="fade-up" data-aos-duration="3000">
+    <div class="col-md-6" >
       <div class="card mb-3">
         <div class="card-body">
-          <h2 class="card-title">Our Mission and Values</h2>
+          <h3 class="card-title">Our Mission and Values</h3>
           <ul class="card-text">
             <li><strong>Mission:</strong> To deliver exceptional construction services that enhance the quality of life for our clients and communities.</li>
             <li><strong>Values:</strong> Integrity, Excellence, Safety, Collaboration, and Sustainability.</li>
           </ul>
         </div>
       </div>
+      
     </div>
-  </div>
+    
+  </div>  
 </div>
 
 
+<section class="home-section"  data-aos="fade-up" data-aos-duration="3000">
+  <div class="text-wrapper">
+    <h1 style="font-weight: bold;color: rgb(249, 70, 38);">Quality</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt ultricies justo ut molestie. Maecenas tincidunt suscipit lectus at eleifend. </p>
+  </div>
+  <div class="gif-wrapper">
+    <img src="../../../assets/images/cover9.png" alt="Gif of a person holding a banner">
+  </div>
+</section>
+
+
+<section class="portfolio">
+  <div class="container" data-aos="fade-up" data-aos-duration="3000">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 style="color: rgb(249, 70, 38);font-weight: bold;">Our Projects</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="portfolio-items">
+          <div class="row">
+            <div class="col-md-4 col-sm-6" *ngFor="let project of projects">
+              <div class="portfolio-item" >
+                <img [src]="project.images[0]" alt="">
+                <div class="portfolio-overlay">
+                  <h3>{{ project.title }}</h3>
+                  <p>{{ project.description }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+</section>
+
+
+<section class="contact-us-section" id="contacts" data-aos="fade-up" data-aos-duration="3000">
+  <h2 style="font-weight: bold;color: rgb(249, 70, 38);">Contact Us</h2>
+  <div class="contact-info">
+    <div class="contact-item">
+      <i class="fa fa-map-marker-alt"></i>
+      <p>123 Main St. Suite 100<br>City, State ZIP</p>
+    </div>
+    <div class="contact-item">
+      <i class="fa fa-phone" style="color: rgb(249, 70, 38);"></i>
+      <p>(123) 456-7890</p>
+    </div>
+    <div class="contact-item">
+      <i class="fa fa-envelope" style="color: rgb(249, 70, 38);"></i>
+      <p>info@example.com</p>
+    </div>
+  </div>
+</section>
+
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 col-sm-12">
+        <h3>About Us</h3>
+        <p>We are a construction company committed to providing top-notch services to our clients. With years of experience and a team of skilled professionals, we pride ourselves on delivering high-quality construction projects that meet and exceed our clients' expectations..</p>
+      </div>
+      <div class="col-md-4 col-sm-12">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a routerLink="">Home</a></li>
+          <li><a routerLink="/services">Services</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contacts">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4 col-sm-12">
+        <h3>Contact Us</h3>
+        <p>1234 Main St.</p>
+        <p>City, State 12345</p>
+        <p>Phone: (123) 456-7890</p>
+        <p>Email: info@example.com</p>
+      </div>
+    </div>
+  </div>
+  <div class="bottom-bar">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-sm-12">
+          <p>&copy; 2023 Company Name. All Rights Reserved.</p>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <ul class="social-icons">
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

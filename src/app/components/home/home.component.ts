@@ -11,23 +11,18 @@ import 'aos/dist/aos.css';
 
 export class HomeComponent implements OnInit {
 
-
+  sendEmail() {
+    window.location.href = 'mailto:youremail@gmail.com';
+  }
  
 
-  slides = [
-    { imgUrl: '../../../assets/images/cover1.png', title: 'Welcome', description: 'Mchemo Construction Manger.Dealers in Constructions and Reinnovations' },
-    { imgUrl: '../../../assets/images/cover5.png', title: 'Quality', description: 'Is our number one priority' },
-    { imgUrl: '../../../assets/images/cover6.png', title: 'Trustworthiness', description: 'We can Guarantee you that' },
-    { imgUrl: '../../../assets/images/cover13.png', title: 'Professionalism', description: 'The one that you have never seen' },
-    { imgUrl: '../../../assets/images/cover12.png', title: 'Creativity', description: 'We add a little bit of our taste to improve your work add a little bit of our taste to add a little bit of our taste to  ' },
-    { imgUrl: '../../../assets/images/cover11.png', title: 'Let\'s work', description: 'You are at the right place' }
-  ];
+
   currentSlide = 0;
   ngOnInit() {
     AOS.init({
       
     });
-    this.showSlide(0);
+   
    
   }
   @HostListener('window:scroll', ['$event'])
@@ -35,11 +30,24 @@ export class HomeComponent implements OnInit {
     AOS.refresh();
   }
 
-  showSlide(index: number) {
-    this.currentSlide = index % this.slides.length;
-    setTimeout(() => {
-      this.showSlide(this.currentSlide + 1);
-    }, 3000);}
  
-
+    projects = [
+      {
+        title: 'Project 1',
+        description: 'A luxurious custom-built home featuring high-end finishes and smart-home technology.',
+        images: ['../../../assets/images/pro9.png', '../../../assets/images/pro9.png', '../../../assets/images/pro11.jpg']
+      },
+      {
+        title: 'Project 2',
+        description: 'This project involved creating a cozy and inviting cabin-style home in a natural setting, complete with handcrafted finishes and details.',
+        images: ['../../../assets/images/pro10.jpg', '../../../assets/images/pro9.png', '../../../assets/images/pro11.jpg']
+      },
+      {
+        title: 'Project 3',
+        description: 'Our team worked closely with the homeowner to design and build their dream home, incorporating personalized touches throughout..',
+        images: ['../../../assets/images/pro8.jpg', '../../../assets/images/pro8.png', '../../../assets/images/pro11.png']
+      }
+    ];
+  
+   
 }
